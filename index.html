@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Varel Bambang Mirzandi | Network Engineer & Linux SysAdmin</title>
+  <style>
+    :root {
+      --bg: #0b1120;
+      --surface: #111827;
+      --card: #1e293b;
+      --border: #334155;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-dark: #0284c7;
+      --green: #34d399;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* Navbar */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(11, 17, 32, 0.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+    }
+    .brand { font-weight: 700; font-size: 1.05rem; color: var(--text); }
+    .brand span { color: var(--accent); }
+    .nav-links { display: flex; gap: 1.25rem; font-size: 0.9rem; }
+    .nav-links a { color: var(--muted); }
+    .nav-links a:hover { color: var(--text); text-decoration: none; }
+
+    /* Hero */
+    .hero { padding: 4.5rem 0 3.5rem; border-bottom: 1px solid var(--border); }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(52, 211, 153, 0.12);
+      color: var(--green);
+      border: 1px solid rgba(52, 211, 153, 0.3);
+      padding: 0.3rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 { font-size: 2.4rem; line-height: 1.2; margin-bottom: 0.75rem; }
+    .hero .subtitle {
+      font-size: 1.15rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .hero p { color: var(--muted); max-width: 680px; margin-bottom: 1.75rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+    .btn {
+      display: inline-block;
+      padding: 0.65rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: background 0.2s;
+    }
+    .btn-primary { background: var(--accent-dark); color: #fff; }
+    .btn-primary:hover { background: #0369a1; text-decoration: none; }
+    .btn-outline { border: 1px solid var(--border); color: var(--text); background: var(--surface); }
+    .btn-outline:hover { border-color: var(--accent); text-decoration: none; }
+
+    /* Sections */
+    section { padding: 3.5rem 0; border-bottom: 1px solid var(--border); }
+    h2 { font-size: 1.5rem; margin-bottom: 1.5rem; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.4rem;
+    }
+    .card h3 { font-size: 1.1rem; margin-bottom: 0.4rem; color: var(--text); }
+    .card .meta { font-size: 0.85rem; color: var(--accent); margin-bottom: 0.75rem; font-weight: 600; }
+    .card p, .card li { color: var(--muted); font-size: 0.93rem; }
+    .card ul { padding-left: 1.15rem; margin-top: 0.4rem; }
+    .card li { margin-bottom: 0.35rem; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.85rem; }
+    .tag {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 0.78rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+    }
+
+    footer { padding: 2.25rem 0; text-align: center; color: var(--muted); font-size: 0.88rem; }
+
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 1.85rem; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">varel<span>.mirzandi</span></div>
+      <nav class="nav-links">
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="pill">● Available for Network &amp; SysAdmin Roles</div>
+      <h1>Varel Bambang Mirzandi</h1>
+      <div class="subtitle">D4 Computer Engineering Student @ PENS | Network Engineer &amp; Linux SysAdmin</div>
+      <p>
+        Berfokus pada infrastruktur jaringan, administrasi server Linux, otomatisasi container/DevOps, serta sistem embedded &amp; IoT. Berpengalaman membangun node jaringan ISP, mengelola infrastruktur web hosting berbasis Linux, dan memegang lisensi MikroTik Certified Network Associate (MTCNA).
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://github.com/varelmirzandi" target="_blank">Explore GitHub</a>
+        <a class="btn btn-outline" href="#projects">View Technical Labs</a>
+        <a class="btn btn-outline" href="mailto:varelmirzandi@gmail.com">Contact via Email</a>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Core Technical Stack</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Networking &amp; Infrastructure</h3>
+          <p>Perancangan topologi, routing &amp; switching, manajemen bandwidth, serta VPN tunneling.</p>
+          <div class="tags">
+            <span class="tag">MikroTik RouterOS</span>
+            <span class="tag">MTCNA Certified</span>
+            <span class="tag">Routing &amp; Switching</span>
+            <span class="tag">L2TP / VPN Tunneling</span>
+            <span class="tag">Cisco Packet Tracer</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Linux, Automation &amp; Embedded</h3>
+          <p>Administrasi server multi-distro, deployment container, otomasi konfigurasi, dan akuisisi sensor.</p>
+          <div class="tags">
+            <span class="tag">Ubuntu / Debian / AlmaLinux</span>
+            <span class="tag">Nginx &amp; DirectAdmin</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Ansible</span>
+            <span class="tag">Bash Scripting</span>
+            <span class="tag">ESP32 / LM35</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Repositories</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>network-infrastructure-labs</h3>
+          <div class="meta">MikroTik RouterOS &amp; Packet Tracer</div>
+          <p>Konfigurasi router RB951Ui-2nD tersanitasi (segmentasi subnet, DHCP, Simple Queue, NAT) dan panduan troubleshooting jaringan.</p>
+          <div class="tags">
+            <span class="tag">RouterOS 7</span>
+            <span class="tag">Simple Queue</span>
+            <span class="tag">Troubleshooting</span>
+          </div>
+          <p style="margin-top:0.9rem;"><a href="https://github.com/varelmirzandi/network-infrastructure-labs" target="_blank">Buka Repository →</a></p>
+        </div>
+
+        <div class="card">
+          <h3>esp32-temp-monitoring</h3>
+          <div class="meta">Embedded IoT &amp; Analog Conditioning</div>
+          <p>Node pemantauan suhu menggunakan ESP32 dan sensor LM35 dengan pengondisi sinyal (op-amp &amp; low-pass filter) serta antarmuka web.</p>
+          <div class="tags">
+            <span class="tag">ESP32</span>
+            <span class="tag">LM35</span>
+            <span class="tag">Op-Amp &amp; LPF</span>
+          </div>
+          <p style="margin-top:0.9rem;"><a href="https://github.com/varelmirzandi/esp32-temp-monitoring" target="_blank">Buka Repository →</a></p>
+        </div>
+
+        <div class="card">
+          <h3>linux-server-automation</h3>
+          <div class="meta">SysAdmin, Ansible &amp; Docker</div>
+          <p>Kumpulan skrip Bash health-check, playbook Ansible baseline server, serta contoh konfigurasi container Docker.</p>
+          <div class="tags">
+            <span class="tag">Bash</span>
+            <span class="tag">Ansible</span>
+            <span class="tag">Docker</span>
+          </div>
+          <p style="margin-top:0.9rem;"><a href="https://github.com/varelmirzandi/linux-server-automation" target="_blank">Buka Repository →</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience &amp; Credentials</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Network &amp; Server Intern</h3>
+          <div class="meta">APJII Jawa Timur</div>
+          <ul>
+            <li>Membangun dan mengonfigurasi infrastruktur teknis Node 2 APJII Jawa Timur serta pengujian server utama.</li>
+            <li>Instalasi perangkat jaringan, konfigurasi router/AP Wi-Fi, dan troubleshooting jalur internet ISP klien.</li>
+            <li>Pemateri teknis dan asisten pelatihan jaringan bagi peserta eksternal.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Cloud &amp; Server Administrator</h3>
+          <div class="meta">Independent Hosting Infrastructure</div>
+          <ul>
+            <li>Mengelola lingkungan web hosting berbasis Linux dan panel DirectAdmin untuk layanan web, database, dan email.</li>
+            <li>Mengamankan akses remote administrasi melalui kebijakan routing, firewall, dan VPN tunneling.</li>
+            <li>Tersertifikasi MTCNA, Linux System Admin, Docker, Ansible, dan Cloud Engineering 101.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="border-bottom:none;">
+      <h2>Get in Touch</h2>
+      <div class="card">
+        <p>Terbuka untuk peluang magang (internship), posisi entry-level Network Engineer / Linux SysAdmin, maupun kolaborasi proyek infrastruktur dan IoT.</p>
+        <p style="margin-top:0.75rem;">
+          <strong>Email:</strong> <a href="mailto:varelmirzandi@gmail.com">varelmirzandi@gmail.com</a> &nbsp;•&nbsp;
+          <strong>GitHub:</strong> <a href="https://github.com/varelmirzandi" target="_blank">github.com/varelmirzandi</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      Served locally via Nginx on Ubuntu • Varel Bambang Mirzandi (Surabaya, Indonesia)
+    </div>
+  </footer>
+
+</body>
+</html>
